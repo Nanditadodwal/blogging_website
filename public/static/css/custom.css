@@ -1,0 +1,19 @@
+.login-image{
+    position: relative;
+    
+}
+
+.fp{
+   
+    color: black;
+}
+.fp:hover{
+    text-decoration: none;
+    color: black;
+
+}
+
+.foot{
+    min-height: 85.5vh;
+    /* margin-bottom: 0px; */
+}

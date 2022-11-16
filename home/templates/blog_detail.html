@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block start %}
+
+
+<section>
+    <div class="container">
+       
+        <div class="row text-center">
+            <div class="col-xl-10 mx-auto"><img class="img-fluid mb-5"
+                    src="/media/{{image}}"
+                    alt=""></div>
+        </div>
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 mx-auto">
+                <div class="text-content">
+                    {{content|safe}}
+                </div>
+            </div>
+        </div>
+        <a href="https://www.facebook.com/sharer.php?u={{request.build_absolute_uri}}" class="fa fa-facebook" title="Facebook" target="_blank">Facebook</a>
+
+        <a href="https://api.whatsapp.com/send?text={{request.build_absolute_uri}}" data-action="share/whatsapp/share"  title="Share on whatsapp" class="fa fa-whatsapp" >Whatsapp</a>
+
+        <a href="https://twitter.com/share?url={{request.build_absolute_uri}}" class="fa fa-twitter" title="Twitter" target="_blank">Twitter</a>
+
+        <a href="http://pinterest.com/pin/create/button/?url={{request.build_absolute_uri}}" class="fa fa-pinterest" title="Pinterest" target="_blank">Pinterest</a>
+        
+    </div>
+    views {{post_views}}
+</section>
+
+
+
+{% endblock %}
